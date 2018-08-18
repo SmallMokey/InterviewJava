@@ -117,7 +117,7 @@ StringBuilder：单线程，非线程安全的
 ###### Exception(异常)
 
 是程序本身可以处理的异常。
-Exception 类有一个重要的子类 RuntimeException。RuntimeException 类及其子类表示“JVM 常用操作”引发的错误。 如：NullPointerException、ArithmeticException、ArrayIndexOutOfBoundException
+Exception 类有一个重要的子类 RuntimeException。RuntimeException 类及其子类表示“JVM 常用操作”引发的错误。 如：NullPointerException、ArithmeticException、ArrayIndexOutOfBoundException  
 **注：异常和错误的区别：异常能被程序本身处理，错误是无法处理的** 
 
 ###### 运行时异常
@@ -129,12 +129,12 @@ Exception 类有一个重要的子类 RuntimeException。RuntimeException 类及
 
 是RuntimeException以外的异常，类型上都属于Exception类及其子类。从程序语法角度讲是必须进行处理的异常，如果不处理，程序就不能编译通过。如IOException、SQLException等以及用户自定义的Exception异常，一般情况下不自定义检查异常 
 
-##### 可检查异常**（checked exceptions）**
+##### 可检查异常**（checked exceptions）**  
 
 定义：编译器要求必须处置的异常
 除了RuntimeException及其子类以外，其他的Exception类及其子类都属于可查异常。这种异常的特点是Java编译器会检查它，也就是说，当程序中可能出现这类异常，要么用try-catch语句捕获它，要么用throws子句声明抛出它，否则编译不会通过 
 
-##### 不可检查异常**（unchecked exceptions）**
+##### 不可检查异常**（unchecked exceptions）**  
 
 定义：编译器不要求强制处理的异常
 包括运行时异常（RuntimeException与其子类）和错误（Error）
@@ -147,7 +147,7 @@ Exception 类有一个重要的子类 RuntimeException。RuntimeException 类及
 
 ###### 捕获异常
 
-方法抛出异常后，运行时系统将寻找合适的异常处理器。潜在异常处理器是异常发生时依次留存在调用栈中的方法集合。从异常方法开始，寻找调用栈中的异常处理器，找到则执行;未找到，则程序终止。
+方法抛出异常后，运行时系统将寻找合适的异常处理器。潜在异常处理器是异常发生时依次留存在调用栈中的方法集合。从异常方法开始，寻找调用栈中的异常处理器，找到则执行;未找到，则程序终止。  
 **对于运行时异常、错误或可查异常，Java技术所要求的异常处理方式有所不同**
 
 - 运行时异常：有Java运行时系统自动抛出，允许程序忽略运行时异常
